@@ -29,9 +29,9 @@ public class Notaria20 {
         
         do {
              System.out.println("\n========================================");
-            System.out.println("    SISTEMA DE GESTIÓN - NOTARÍA 20     ");
+            System.out.println("     GESTIÓN profesor jhon arrieta  - NOTARÍA 20     ");
             System.out.println("========================================");
-            System.out.println("1. Registrar trámite");
+            System.out.println("1. Tramitar registro");
             System.out.println("2. Ver todos los trámites registrados (Lista)");
             System.out.println("3. Ver trámites pendientes (Cola)");
             System.out.println("4. Procesar siguiente trámite");
@@ -62,10 +62,10 @@ public class Notaria20 {
                        TramiteNotarial nuevoTramite = new TramiteNotarial(num , tipo, cliente,"pendiente");
                         listaGeneral.agregar(nuevoTramite);
                         colaPendientes.encolar(nuevoTramite);
-                        System.out.println("¡ su Trámite registrado con éxito!");
+                        System.out.println("¡ su Trámite registrado satisfactoriamente !");
                         break;
                     case 2: 
-                        System.out.println("\n--- REGISTRO HISTÓRICO GENERAL (LISTA) ");
+                        System.out.println("\n--- REGISTRO DE historias en  GENERAL (LISTA) ");
                         listaGeneral.mostrarAdelante();
                         break;
                         
