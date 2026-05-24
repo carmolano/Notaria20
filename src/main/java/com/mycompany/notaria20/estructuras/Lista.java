@@ -132,7 +132,7 @@ public class Lista {
  
          public void mostrarAdelante() {
            if (cabeza == null) {
-            System.out.println("La lista general está vacía.");
+            System.out.println("La lista generica  está vacía.");
             return;
            }
             Nodo actual = cabeza;
@@ -144,7 +144,7 @@ public class Lista {
  
            public void mostrarAtras() {
               if (cabeza == null) {
-                System.out.println("La lista general está vacía.");
+                System.out.println("La lista generica  está vacía.");
                return;
             }
           recursivoMostrarAtras(cabeza);

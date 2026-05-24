@@ -73,12 +73,12 @@ public class Pila {
 
     public void mostrar() {
         if (esVacia()) {
-            System.out.println("El historial de trámites procesados está vacío.");
+            System.out.println("El historial  está vacío.");
             return;
         }
         Nodo actual = cima;
         while (actual != null) {
-            System.out.println("[Procesado] -> " + actual.getDato().toString());
+            System.out.println("[trasmitiendo y procesando] -> " + actual.getDato().toString());
             actual = actual.getSiguiente();
       
         }
