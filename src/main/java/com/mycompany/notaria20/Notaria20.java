@@ -28,20 +28,20 @@ public class Notaria20 {
         
         
         do {
-             System.out.println("\n========================================");
-            System.out.println("     GESTIÓN profesor jhon arrieta  - NOTARÍA 20     ");
-            System.out.println("========================================");
+             System.out.println("\n --------/-----/------/---------");
+            System.out.println("     GESTION profesor jhon arrieta  - NOTARIA 20     ");
+            System.out.println("---------/---------/---------/------------");
             System.out.println("1. Tramitar registro");
-            System.out.println("2. Ver todos los trámites registrados (Lista)");
-            System.out.println("3. Ver trámites pendientes (Cola)");
-            System.out.println("4. Procesar siguiente trámite");
-            System.out.println("5. Ver historial de trámites procesados (Pila)");
-            System.out.println("6. Buscar trámite por número");
-            System.out.println("7. Cancelar trámite pendiente");
-            System.out.println("8. Deshacer último procesamiento");
+            System.out.println("2. Ver todos los tramites registrados (Lista)");
+            System.out.println("3. Ver tramites pendientes (Cola)");
+            System.out.println("4. Procesar siguiente tramite");
+            System.out.println("5. Ver historial de tramites procesados (Pila)");
+            System.out.println("6. Buscar tramite por numero");
+            System.out.println("7. Cancelar tramite pendiente");
+            System.out.println("8. Deshacer ultimo procesamiento");
             System.out.println("9. Ver cantidad de elementos en el sistema");
             System.out.println("10. Salir");
-            System.out.print("Seleccione una opción (1-10): ");
+            System.out.print("Seleccione una opcion (1-10): ");
             
             
             
@@ -71,32 +71,32 @@ public class Notaria20 {
                         
                         
                     case 3:    
-                         System.out.println("\n--- TRÁMITES EN ESPERA DE ATENCIÓN (COLA) ");
+                         System.out.println("\n--- TRAMITES EN ESPERA DE ATENCION (COLA) ");
                         colaPendientes.mostrar();
                         break;
 
                         
                     case 4:
                          if (colaPendientes.esVacia()) {
-                            System.out.println("No hay trámites pendientes por procesar.");
+                            System.out.println("No hay tramites pendientes por procesar.");
                         } else {
                            
                             TramiteNotarial procesado = (TramiteNotarial) colaPendientes.desencolar();
                             procesado.setEstado("Procesado");
                             historialProcesados.apilar(procesado);
-                            System.out.println("Se procesó el trámite: " + procesado);
+                            System.out.println("Se proceso el trámite: " + procesado);
                         }
                         break;
                    
                          //ver historialde elementos procesados 
                     case 5:    
-                         System.out.println("\n--- HISTORIAL DE TRÁMITES FINALIZADOS (PILA) ");
+                         System.out.println("\n--- HISTORIAL DE TRAMITES FINALIZADOS (PILA) ");
                         historialProcesados.mostrar();
                         break;
                         
                         
                         case 6: // Buscar elemento por el  código
-                        System.out.print("Ingrese el número de trámite a buscar: ");
+                        System.out.print("Ingrese el número de tramite a buscar: ");
                         String buscarNum = leer.nextLine();
                         
                         TramiteNotarial temporalBusqueda = new TramiteNotarial(buscarNum, "", "", "");
@@ -107,7 +107,7 @@ public class Notaria20 {
                             System.out.println("Trámite encontrado en la posición " + (indice + 1) + ":");
                             System.out.println(encontrado);
                         } else {
-                            System.out.println("El trámite con número '" + buscarNum + "' no existe.");
+                            System.out.println("El tramite con número '" + buscarNum + "' no existe.");
                         }
                         break;
 
